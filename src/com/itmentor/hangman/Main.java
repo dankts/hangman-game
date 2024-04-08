@@ -11,15 +11,13 @@ public class Main {
             System.out.println("Чтобы начать игру введите: [YES] - to start game or [END] - to exit");
             inputAnswer = scanner.next();
             switch (inputAnswer) {
-                case "YES":
+                case "YES" -> {
                     Word word = new Word();
                     HangmanGame gameService = new HangmanGame(word);
                     gameService.processGame();
-                    break;
-                case "END":
-                    System.exit(0);
-                default:
-                    System.out.println("Неверный ввод команды. Попробуйте еще раз!");
+                }
+                case "END" -> System.exit(0);
+                default -> System.out.println("Неверный ввод команды. Попробуйте еще раз!");
             }
         }
     }
